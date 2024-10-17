@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/5cd5ba1ce4471a00256930c0/train/javascript
+
+function lastDigit(n, d) {
+  if (d <= 0) {
+        return [];
+    }
+    return Array.from(String(n), Number).slice(-d);
+}
