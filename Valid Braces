@@ -1,0 +1,20 @@
+https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript
+
+function validBraces(braces){
+  let arr = []
+  for(let i=0; i < braces.length; i++){
+    if ( braces[i] === "(" || braces[i] === "{" || braces[i] === "["){
+      arr.push(braces[i])
+    } else{
+      if(arr.length === 0) return false
+      let last = arr[arr.length-1]
+      if( (braces[i] === ']' && last === '[') || (braces[i] === '}' && last === '{') || (braces[i] === ')' && last === '('))
+      {
+        arr.pop()
+      } else {
+        break;
+      }
+    }
+  }
+  return arr.length === 0
+}
