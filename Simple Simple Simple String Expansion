@@ -1,0 +1,9 @@
+https://www.codewars.com/kata/5ae326342f8cbc72220000d2/train/javascript
+
+function stringExpansion(s) {
+ return s.replace(/\d\D+/g,l => {
+    let d = l.replace(/[^0-9]/g,'')
+    let letters = l.replace(/[0-9]/g,'')
+    return letters.split``.map(l  => l.repeat(d)).join('')
+  }).replace(/\d/g,'')
+}
