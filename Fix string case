@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/javascript
+
+function solve(s){
+  let countUp = 0;
+  let countLow = 0;
+  for(let el of s) {
+    if(el===el.toUpperCase()) {
+      countUp++; }
+    else  {countLow++; }
+  }
+  return countUp>countLow ? s.toUpperCase() : s.toLowerCase();
+}
