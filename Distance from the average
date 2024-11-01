@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/568ff914fc7a40a18500005c/train/javascript
+
+function distancesFromAverage(t){
+  const avg = t.reduce((a, b) => a + b, 0) / t.length;
+  return t.map(el => Math.round((avg - el) * 100) / 100);
+}
