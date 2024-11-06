@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/5a084a098ba9146690000969/train/javascript
+
+function timeConvert(num) { 
+  let min = Math.floor(num/60);
+  let sec = num % 60;
+    if(num<=0) return '00:00';
+  let finalMin = (min < 10) ? '0'+min : min;
+  let finalSec = (sec < 10) ? '0'+sec:  sec;
+    return finalMin + ':' + finalSec;
+} 
