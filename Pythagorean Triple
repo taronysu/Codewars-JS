@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5951d30ce99cf2467e000013/train/javascript
+
+function isPythagoreanTriple(i) {
+    return i[2]**2==i[0]**2+i[1]**2 || i[0]**2==i[1]**2+i[2]**2 || i[1]**2==i[0]**2+i[2]**2
+}
