@@ -1,0 +1,27 @@
+https://www.codewars.com/kata/5b0a80ce84a30f4762000069/train/javascript
+
+class Dinglemouse {
+
+ constructor() {
+        this.hello_message = { base: 'Hello.' };
+    }
+
+    setAge(age) {
+        this.hello_message['age'] = ` I am ${age}.`;
+        return this;
+    }
+
+    setSex(sex) {
+        this.hello_message['sex'] = ` I am ${['female', 'male'][sex.toUpperCase() === 'M' ? 1 : 0]}.`;
+        return this;
+    }
+
+    setName(name) {
+        this.hello_message['name'] = ` My name is ${name}.`;
+        return this;
+    }
+
+    hello() {
+        return Object.values(this.hello_message).join('');
+    }
+  }
