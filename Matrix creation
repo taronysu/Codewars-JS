@@ -1,0 +1,17 @@
+https://www.codewars.com/kata/5a34da5dee1aae516d00004a/train/javascript
+
+function getMatrix(n) {
+const res = [];
+    for (let i = 0; i < n; i++) {
+        const arr = [];
+        for (let j = 0; j < n; j++) {
+            if (i === j) {
+                arr.push(1);
+            } else {
+                arr.push(0);
+            }
+        }
+        res.push(arr);
+    }
+    return res;
+} 
