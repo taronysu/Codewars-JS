@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+
+function drawStairs(n) {
+    let a = "I\n "
+    var res = "" ;
+    for(let i = 1; i <= n; i++){
+      if( i === n)  break;
+      res += a
+      a += " "
+    }
+    return res += "I"
+  }
