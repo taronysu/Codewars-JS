@@ -1,0 +1,9 @@
+https://www.codewars.com/kata/592e830e043b99888600002d/train/javascript
+
+function encode(str,  n) {
+  let key = n +'';
+  let arr = [];
+  for (let i = 0; i<str.length; i++) {
+      arr.push(str[i].charCodeAt()-96 + Number(key[i%key.length]))
+   }
+  return arr;
