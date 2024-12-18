@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/566efcfbf521a3cfd2000056/train/javascript
+
+function flipNumber(n)
+{
+  let res = "";
+  let nn = n.split("")
+  for (var i = 1; i <= n.length; i++) {
+    nn.reverse();
+    res += nn[0];
+    nn.shift();
+  }
+  return res;
+}
