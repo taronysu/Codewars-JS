@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/5840586b5225616069000001/train/javascript
+
+function highestValue(a, b) {
+    const s1 = Array.from(a).reduce((sum, c) => sum + c.charCodeAt(0), 0);
+    const s2 = Array.from(b).reduce((sum, c) => sum + c.charCodeAt(0), 0);
+    return s1 >= s2 ? a : b;
+}
