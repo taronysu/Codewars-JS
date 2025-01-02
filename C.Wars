@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/55968ab32cf633c3f8000008/train/javascript
+
+function initials(name){
+const names = name.split(' ').map(n => n.charAt(0).toUpperCase() + n.slice(1));
+    const length = names.length - 1;
+    return names.map((el, i) => (length !== i ? el.charAt(0) : el)).join('.');
+}
