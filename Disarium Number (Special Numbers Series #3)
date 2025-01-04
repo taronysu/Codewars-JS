@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5a53a17bfd56cb9c14000003/train/javascript
+
+function disariumNumber(number) {
+    return (Array.from(String(number)).reduce((sum, el, i) => sum + Math.pow(parseInt(el), i + 1), 0) === number) ? 'Disarium !!' : 'Not !!';
+}
