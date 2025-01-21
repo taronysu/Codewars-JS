@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1/train/javascript
+
+function arrayMadness(a, b) {
+const squareAndSum = a.reduce((c, d) => c + d ** 2,0);
+const sumOfCubes = b.reduce((c, d) => c + d ** 3,0);
+  return squareAndSum > sumOfCubes;
+}
