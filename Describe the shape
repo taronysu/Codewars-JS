@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/59a1ea8b70e25ef8e3002992/train/javascript
+
+function describeTheShape( angles ) {
+    return angles < 3 ? "this will be a line segment or a dot" 
+    :`This shape has ${angles} sides and each angle measures ${Math.floor(180*(angles-2)/angles)}`;
+}
