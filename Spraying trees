@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/5981a139f5471fd1b2000071/train/javascript
+
+function task(w, t, c) {
+const days = {
+        'Monday': 'James',
+        'Tuesday': 'John',
+        'Wednesday': 'Robert',
+        'Thursday': 'Michael',
+        'Friday': 'William'
+    };
+    return `It is ${w} today, ${days[w]}, you have to work, you must spray ${t} trees and you need ${c * t} dollars to buy liquid`;
+}
