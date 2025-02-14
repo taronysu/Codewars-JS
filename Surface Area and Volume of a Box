@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/565f5825379664a26b00007c/train/javascript
+
+function getSize(w, h, d) {
+    let area = 2*(w*h + h*d + w*d);
+    let volume = w*h*d;
+  return [area, volume];
+}
