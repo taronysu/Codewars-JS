@@ -1,0 +1,17 @@
+https://www.codewars.com/kata/55031bba8cba40ada90011c4/train/javascript
+
+const iscub = (n) => {
+    return n === String(n).split('').reduce((sum, d) => sum + Math.pow(parseInt(d), 3), 0);
+};
+
+function isSumOfCubes(s) {
+   const R = s.split('').map(c => (/\d/.test(c) ? c : ' ')).join('').split(/\s+/);
+    const L = [];
+    for (const e of R) {
+        for (let i = 0; i < e.length; i += 3) {
+            const n = parseInt(e.slice(i, i + 3));
+            if (iscub(n)) L.push(n);
+        }
+    }
+    return L.length === 0 ? "Unlucky" : L.join(' ') + ` ${L.reduce((a, b) => a + b, 0)} Lucky`;
+}
