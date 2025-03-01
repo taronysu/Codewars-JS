@@ -1,0 +1,22 @@
+https://www.codewars.com/kata/599db0a227ca9f294b0000c8/train/javascript
+
+function testResult(array) {
+let hash = {
+  'h':0,
+  'a':0,
+  'l':0,
+}
+let avg = +(array.reduce((acc,cur)=>acc+cur,0)/array.length).toFixed(3);
+for(let el of array) {
+  if(el==10||el==9) {
+    hash['h']++;
+  } else if(el==8||el==7) {
+    hash['a']++;
+  }
+  else hash['l']++;
+}
+const top = (currentValue) => currentValue == 10 || currentValue == 9;
+  if (array.every(top)) return [avg , hash,'They did well']
+    else 
+  return [avg,hash];
+}
