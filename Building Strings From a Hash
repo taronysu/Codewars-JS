@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/51c7d8268a35b6b8b40002f2/train/javascript
+
+function solution(pairs){
+  let string = ""
+  for ( let key in pairs) {
+    
+    string += key + " = " + pairs[key] + ','
+  }
+  
+ return string.slice(0,-1);
+}
