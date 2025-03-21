@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/57f75cc397d62fc93d000059/train/javascript
+
+function calc(x){
+  let s = '';
+    for (let el of x) {
+        s += el.charCodeAt(0).toString();
+    }
+    let n = s.replace(/7/g, '1');
+    let s1 = Array.from(s).reduce((acc, el) => acc + parseInt(el), 0);
+    let s2 = Array.from(n).reduce((acc, el) => acc + parseInt(el), 0);
+    return s1 - s2;
+}
