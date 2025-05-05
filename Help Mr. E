@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/56ce2f90aa4ac7a4770019fa/train/javascript
+
+function evenator(s) {
+    return s.replace(/[.,?!_]/g, '').split(' ').map(x => x.length % 2 === 0 ? x : x + x[x.length - 1]).join(' ');
+}
