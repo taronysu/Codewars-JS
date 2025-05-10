@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5727868888095bdf5c001d3d/train/javascript
+
+function stringToIntArray(s){
+    return s.split(",").filter(i => i !== "").map(i => parseInt(i));
+}
