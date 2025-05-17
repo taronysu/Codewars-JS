@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/52dbae61ca039685460001ae/train/javascript
+
+function change(string){
+  string = string.toLowerCase();
+  let alpha = 'abcdefghijklmnopqrstuvwxyz';
+  let res = '';
+  let s = alpha.split('');
+  for (let i=0; i<alpha.length; i++) {
+    if (string.search(alpha[i]) == -1) {
+      res += '0';
+    } else {
+      res += '1';
+    }
+  }
+  return res;
+}
