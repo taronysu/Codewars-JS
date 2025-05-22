@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/57cff961eca260b71900008f/train/javascript
+
+function isVow(a){
+    let vowels = {97: 'a', 101: 'e', 105: 'i', 111: 'o', 117: 'u' }
+     return a.map(el => vowels[el] !== undefined ? vowels[el] : el);
+}
