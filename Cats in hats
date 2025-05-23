@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/57b5907920b104772c00002a/train/javascript
+
+function height(n) {
+    return (2000000 * (1 - Math.pow(0.4, n + 1)) / (1 - 0.4)).toFixed(3)
+}
