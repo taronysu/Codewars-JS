@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/5356ad2cbb858025d800111d/train/javascript
+
+function capMe(names) {
+ let arr =[]
+for(let i = 0; i < names.length;i++) {
+   arr.push(names[i][0].toUpperCase()+names[i].slice(1,).toLowerCase())
+
+  }
+return arr
+}
