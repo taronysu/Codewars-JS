@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/57193a349906afdf67000f50/train/javascript
+
+function magicSum(arr) {
+const even = arr.filter(n => n % 2 !== 0);
+    const filtered = even.filter(num => num.toString().includes('3'));
+    return filtered.reduce((acc, num) => acc + num, 0);
+}
