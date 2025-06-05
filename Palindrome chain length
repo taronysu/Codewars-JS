@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/525f039017c7cd0e1a000a26/train/javascript
+
+var palindromeChainLength = function(n) {
+     let  count = 0;
+    let copy = parseInt((n + '').split('').reverse().join(''));
+    while (copy !== n) {
+      n = parseInt(n) + parseInt(copy);
+      copy = parseInt((n + '').split('').reverse().join(''));
+      count++;
+    }
+    return count;
+}
