@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/58069e4cf3c13ef3a6000168/train/javascript
+
+function reverse(n){
+  let rev = 0;
+  while(n > 0) {
+    let rem = n % 10;
+    rev = (rev * 10) + rem;
+    n = Math.floor(n / 10);
+  }
+  return rev;
+}
