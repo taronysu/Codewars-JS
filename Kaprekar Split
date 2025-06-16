@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/5b6ee22ac5cc71833f0010d7/train/javascript
+
+function kaprekarSplit(n){
+const sqNum = (n ** 2).toString();
+    if (sqNum.length < 2) {
+        return 0;
+    }
+    for (let i = 1; i < sqNum.length; i++) {
+        if (parseInt(sqNum.slice(0, i)) + parseInt(sqNum.slice(i)) === n) {
+            return i;
+        }
+    }
+    return -1;
+}
