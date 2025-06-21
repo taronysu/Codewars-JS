@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/57ef016a7b45ef647a00002d/train/javascript
+
+function filterHomogenous(arrays) {
+    return arrays.filter(a => a.length > 0 && a.every(b => typeof a[0] === typeof b));
+  }
