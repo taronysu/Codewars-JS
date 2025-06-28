@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/5b6c220fa0a661fbf200005d/train/javascript
+
+function scoreboard(string) {
+  let scores = {'one':1, 'two':2, 'three':3, 'four':4, 'five':5, 'six':6 , 'seven':7, 'eight':8, 'nine':9, 'nil':0}
+  let res = []
+  let words = string.split(" ")
+    for(let i=0;i<words.length;i++){
+      for(let key in scores){
+      if(words[i].includes(key))
+      res.push(scores[key])
+      }
+    }
+  return res
+}
