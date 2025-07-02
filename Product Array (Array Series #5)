@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/5a905c2157c562994900009d/train/javascript
+
+function productArray(numbers){
+  let p = numbers.reduce((t, n) => t * n,1)
+  return numbers.map(n => p / n)
+}
