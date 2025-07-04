@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/5592fc599a7f40adac0000a8/train/javascript
+
+function sum(matrix) {
+  let  arr1=[];
+  let  arr2=[];
+  for (let i=0; i<matrix.length; i++){
+  arr1.push(matrix[i][i])
+  arr2.push(matrix[i].reverse()[i])
+  }
+  return arr1.reduce((a,b) => a + b,0)+arr2.reduce((a,b) => a + b, 0);
+}
