@@ -1,0 +1,37 @@
+https://www.codewars.com/kata/590adadea658017d90000039/train/javascript
+
+function fruit(reels, spins){
+   let d={};
+  let arr=[reels[0][spins[0]],reels[1][spins[1]],reels[2][spins[2]]].map(el=> d[el]=d[el] ?d[el] + 1 : 1);
+  let score =0;
+  if (d['Wild']===3) score+=100;
+  if (d['Wild']===2) score+=10;
+  if (d['Star']===3) score+=90;
+  if (d['Star']===2 && d['Wild']!==1) score+=9;
+  if (d['Star']===2 && d['Wild']===1) score+=18;
+  if (d['Bell']===3) score+=80;
+  if (d['Bell']===2 && d['Wild']!==1) score+=8;
+  if (d['Bell']===2 && d['Wild']===1) score+=16;
+  if (d['Shell']===3) result+=70;
+  if (d['Shell']===2 && d['Wild']!==1) score+=7;
+  if (d['Shell']===2 && d['Wild']===1) score+=14;
+  if (d['Seven']===3) score+=60;
+  if (d['Seven']===2 && d['Wild']!==1) score+=6;
+  if (d['Seven']===2 && d['Wild']===1) score+=12;
+  if (d['Cherry']===3) score+=50;
+  if (d['Cherry']===2 && d['Wild']!==1) score+=5;
+  if (d['Cherry']===2 && d['Wild']===1) score+=10;
+  if (d['Bar']===3) score+=40;
+  if (d['Bar']===2 && d['Wild']!==1) score+=4;
+  if (d['Bar']===2 && d['Wild']===1) score+=8;
+  if (d['King']===3) score += 30;
+  if (d['King']===2 && d['Wild']!==1) score+=3;
+  if (d['King']===2 && d['Wild']===1) score+=6;
+  if (d['Queen']===3) score+=20;
+  if (d['Queen']===2 && d['Wild']!==1) score+=2;
+  if (d['Queen']===2 && d['Wild']===1) score+=4;
+  if (d['Jack']===3) score+=10;
+  if (d['Jack']===2 && d['Wild']!==1) score+=1;
+  if (d['Jack']===2 && d['Wild']===1) score+=2;
+  return score;
+}
