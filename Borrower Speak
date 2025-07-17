@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/57d2ba8095497e484e00002e/train/javascript
+
+function borrow(s) {
+    s = s.replace(/ /g, '').toLowerCase();
+    return Array.from(s).filter(x => /^[a-zA-Z]+$/.test(x)).join('');
+}
