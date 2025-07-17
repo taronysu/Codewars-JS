@@ -1,0 +1,20 @@
+https://www.codewars.com/kata/58ca77b9c0d640ecd2000b1e/train/javascript
+
+function getSum(n) { 
+    let sum = 0;
+    for (let digit of n.toString()) {  
+        sum += parseInt(digit);       
+    }
+    return sum;
+}
+
+function procedure(i) {
+    let arr = [];
+    for (let j = 1; j <= 100; j++) {
+        if (j % i === 0) {
+            arr.push(j);
+        }
+    }
+    let mult = arr.map(el => getSum(el));
+    return mult.reduce((acc, val) => acc + val, 0);
+}
