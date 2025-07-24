@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/5413759479ba273f8100003d/train/javascript
+
+reverse = function(array) {
+  let arr = [];
+for(let i = 0; i<array.length; i++)
+  arr.unshift(array[i]);
+  return arr;
+}
