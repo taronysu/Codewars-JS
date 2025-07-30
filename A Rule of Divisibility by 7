@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/55e6f5e58f7817808e00002e/train/javascript
+
+function seven(m) {
+let times = 0;
+    let number = m;
+    while (number.toString().length > 2) {
+        times += 1;
+        number = Math.floor(number / 10) - (number % 10) * 2;
+    }
+    return [number, times];
+}
