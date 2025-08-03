@@ -1,0 +1,22 @@
+https://www.codewars.com/kata/5441310626bc6a1e61000f2c/train/javascript
+
+function colourful(number) {
+ const arr = [];
+    const s = number.toString();
+    const length = s.length;
+
+    for (let l = 1; l <= length; l++) {
+        let i = 0;
+        while ((i + l) <= length) {
+            const substr = s.substring(i, i + l);
+            if (substr.length === 1) {
+                arr.push(parseInt(substr));
+            } else {
+                const product = Array.from(substr).reduce((x, y) => parseInt(x) * parseInt(y), 1);
+                arr.push(product);
+            }
+            i++;
+        }
+    }
+    return arr.length === new Set(arr).size;
+}
