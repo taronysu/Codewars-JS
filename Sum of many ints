@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/54c2fc0552791928c9000517/train/javascript
+
+function f(n, m) {
+    return Math.floor(n / m) * (m - 1) * m / 2 + (n % m) * (n % m + 1) / 2;
+}
