@@ -1,0 +1,15 @@
+https://www.codewars.com/kata/59f34ec5a01431ab7600005a/train/javascript
+
+function count(n) {
+    if (n < 0) {
+        return 0;
+    }
+
+    if (n <= 1) {
+        return 1;
+    }
+
+    const x = (n * Math.log10(n / Math.E) + Math.log10(2 * Math.PI * n) / 2.0);
+
+    return Math.floor(x) + 1;
+}
