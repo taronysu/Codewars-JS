@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/59ad13d5589d2a1d84000020/train/javascript
+
+function reverseFizzBuzz(arr) {
+let f = arr.includes("Fizz") ? arr.indexOf("Fizz") : arr.indexOf("FizzBuzz");
+    let b = arr.includes("Buzz") ? arr.indexOf("Buzz") : arr.indexOf("FizzBuzz");
+    return [f + 1, b + 1];
+  }
