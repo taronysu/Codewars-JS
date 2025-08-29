@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/514a024011ea4fb54200004b/train/javascript
+
+function domainName(url){
+    return url.split("www.").pop().split("//").pop().split(".")[0];
+  }
