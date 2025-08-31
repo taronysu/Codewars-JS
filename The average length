@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/5a430359e1ce0e35540000b1/train/javascript
+
+function averageLength(a) { 
+  let s = 0;
+  for (let el of a)  {
+    s += el.length
+  }
+  let l = Math.round(s/a.length);
+  let res = [];
+  for(let el of a) {
+    res.push(el[0].repeat(l));
+  }
+  return res;
+}
