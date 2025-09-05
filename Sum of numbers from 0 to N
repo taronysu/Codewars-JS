@@ -1,0 +1,20 @@
+https://www.codewars.com/kata/56e9e4f516bcaa8d4f001763/train/javascript
+
+var SequenceSum = (function() {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function(count) {
+    let mas=[];
+    for(let i=0;i<=count;i++) {
+      mas.push(i);
+    }
+    let s=mas.reduce((total,el)=>total+el,0)
+    let ss=mas.join('+');
+    if(count<0) return `${count}<0`;
+    if(count==0) return `${count}=0`;
+    return `${ss} = ${s}`;
+  };
+
+  return SequenceSum;
+
+})();
