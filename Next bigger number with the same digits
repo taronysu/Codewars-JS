@@ -1,0 +1,25 @@
+https://www.codewars.com/kata/55983863da40caa2c900004e/train/javascript
+
+function nextBigger(n){
+    n = n.toString();
+    let arr = Array.from(n);
+    let i = 0;
+    if (arr.every((val, index) => index === arr.length - 1 || val >= arr[index + 1])) {
+        return -1;
+    }
+    for (i = arr.length - 2; i >= 0; i--) {
+        if (arr[i] < arr[i + 1]) {
+            let head = arr.slice(0, i).join('');
+            let tail = arr.slice(i);
+            let c = parseInt(tail[0]) + 1;
+            while (!tail.includes(c.toString())) {
+                c++;
+            }
+            c = c.toString();
+            let j = tail.indexOf(c);
+            head += c;
+            tail = tail.slice(0, j).concat(tail.slice(j + 1)).sort().join('');
+            return parseInt(head + tail);
+        }
+    }
+}
