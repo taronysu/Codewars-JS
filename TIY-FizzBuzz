@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/5889177bf148eddd150002cc/train/javascript
+
+function tiyFizzBuzz(s){
+    return Array.from(s).map(c => {
+        const iron = c === c.toUpperCase() && c !== c.toLowerCase() ? 'Iron ' : '';
+        const yard = 'aeiou'.includes(c.toLowerCase()) ? 'Yard' : '';
+        const result = (iron + yard).trim();
+        return result || c;
+    }).join('');
+}
