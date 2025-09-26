@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5276c18121e20900c0000235/train/javascript
+
+function findNumber(array) {
+    return ((1+(array.length + 1))*(array.length + 1))/2 - array.reduce((s, i) => s + i, 0)
+}
