@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/526989a41034285187000de4/train/javascript
+
+function ipsBetween(start, end){
+    start = start.split('.');
+    end = end.split('.');
+    let pos0 = (parseInt(end[0], 10) - parseInt(start[0], 10)) * (256 ** 3);
+    let pos1 = (parseInt(end[1], 10) - parseInt(start[1], 10)) * (256 ** 2);
+    let pos2 = (parseInt(end[2], 10) - parseInt(start[2], 10)) * 256;
+    let pos3 = parseInt(end[3], 10) - parseInt(start[3], 10);
+    return pos0 + pos1 + pos2 + pos3;
+}
