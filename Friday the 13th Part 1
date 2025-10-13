@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5925acf31a9825d616000e74/train/javascript
+
+function killcount(c, jason){
+    return c.filter(el => el[1] < jason).map(el => el[0]);
+}
