@@ -1,0 +1,24 @@
+https://www.codewars.com/kata/586d6cefbcc21eed7a001155/train/javascript
+
+function longestRepetition(chars) {
+    if (chars.length === 0) {
+        return ['', 0];
+    }
+    const l = chars.length;
+    let count = 0;
+    let res = chars[0];
+    for (let i = 0; i < l; i++) {
+        let cur_count = 1;
+        for (let j = i + 1; j < l; j++) {
+            if (chars[i] !== chars[j]) {
+                break;
+            }
+            cur_count += 1;
+        }
+        if (cur_count > count) {
+            count = cur_count;
+            res = chars[i];
+        }
+    }
+    return [res, count];
+}
