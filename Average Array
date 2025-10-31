@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/596f6385e7cd727fff0000d6/train/javascript
+
+function avgArray(arr) {
+  let res=[];
+  let t=[];
+  for (let i=0;i<arr[0].length;i++){
+      for (let j=0;j<arr.length;j++){
+        t.push(arr[j][i])    
+    }
+        res.push(t)
+        t=[]
+    }
+  return res.map(v=>v.reduce((a,b)=>a+b,0)/arr.length)
+}
