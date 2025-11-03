@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/56b1eb19247c01493a000065/train/javascript
+
+function uniqueSum(lst){
+    return lst.length !== 0 ? [...new Set(lst)].reduce((a, b) => a + b, 0) : null;
+}
