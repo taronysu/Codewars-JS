@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/524c6a2e55025e3fba00020f/train/javascript
+
+var MyNamespace = MyNamespace || {}; // Define or extend MyNamespace
+
+MyNamespace.MyClass = class {
+  constructor(message) {
+    this.message = message;
+  }
+
+  sayHello() {
+    return this.message;
+  }
+};
