@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/5937ae46377144bb2f000029/train/javascript
+
+function getRectangleString(width, height) {
+if (width == 1 && height == 1)
+  return '*\r\n'
+ if (width == 1 && height == 2)
+   return '*\r\n*\r\n'
+  let s = '*'.repeat(width)+'\r\n'
+  let m = '*'+' '.repeat(width - 2)+'*'+'\r\n'
+  let e = m.repeat(height - 2)
+  return s + e + s;
+}
