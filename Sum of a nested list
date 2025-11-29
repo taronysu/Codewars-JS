@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/5a15a4db06d5b6d33c000018/train/javascript
+
+const sumNested = l => {
+let total = 0;
+    for (let j = 0; j < l.length; j++) {
+        if (Array.isArray(l[j])) {
+            total += sumNested(l[j]);
+        } else {
+            total += l[j];
+        }
+    }
+    return total;
+};
