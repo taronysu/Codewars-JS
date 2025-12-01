@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5c11c3f757415b1735000338/train/javascript
+
+function palindromicExpression() {
+    return "n => nn >= n"
+}
