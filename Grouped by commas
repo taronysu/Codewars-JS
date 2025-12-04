@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/5274e122fc75c0943d000148/train/javascript
+
+function groupByCommas(n) {
+    n = n.toString();
+    if (n.length < 4) return n;
+    const t = n.slice(0, n.length % 3);
+    n = n.slice(t.length);
+    const res = Array.from({length: n.length / 3}, (_, i) => n.slice(i * 3, i * 3 + 3)).join(",");
+    return t.length < 1 ? res : t + "," + res;
+}
