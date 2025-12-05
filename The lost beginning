@@ -1,0 +1,25 @@
+https://www.codewars.com/kata/659af96994b858db10e1675f/train/javascript
+
+function beginning(s) {
+ for (let length = 1; length <= Math.floor(s.length / 2); length++) {
+        let firstNumber = parseInt(s.substring(0, length));
+        let currentNumber = firstNumber;
+        let index = length; 
+        let validSequence = true; 
+        while (index < s.length) {
+            let nextNumberStr = (currentNumber + 1).toString();
+            let nextNumberLength = nextNumberStr.length;
+            if (s.substring(index, index + nextNumberLength) === nextNumberStr) {
+                index += nextNumberLength;
+                currentNumber += 1;
+            } else {
+                validSequence = false;
+                break;
+            }
+        }
+        if (validSequence && index === s.length) {
+            return firstNumber;
+        }
+    }
+    return parseInt(s);
+  }
