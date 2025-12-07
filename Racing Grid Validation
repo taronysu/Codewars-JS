@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/692c80fa12006b05757089dd/train/javascript
+
+function validateRace(moves) {
+  const n = moves.length;
+    const positions = Array.from({ length: n }, (_, index) => index);
+    
+    for (let i = 0; i < n; i++) {
+        const newPosition = i + moves[i];
+        if (newPosition < 0 || newPosition >= n || positions[newPosition] !== newPosition) {
+            return false;
+        }
+        positions[newPosition] = -1; // Mark as occupied
+    }
+    
+    return true;
+}
