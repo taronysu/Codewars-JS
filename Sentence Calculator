@@ -1,0 +1,17 @@
+https://www.codewars.com/kata/5970fce80ed776b94000008b/train/javascript
+
+function lettersToNumbers(s) {
+  let totalScore = 0;
+
+    for (let char of s) {
+        if (/[a-z]/.test(char)) {
+            totalScore += char.charCodeAt(0) - 96; // 'a' = 1, ..., 'z' = 26
+        } else if (/[A-Z]/.test(char)) {
+            totalScore += (char.charCodeAt(0) - 64) * 2; // 'A' = 2, ..., 'Z' = 52
+        } else if (/\d/.test(char)) {
+            totalScore += parseInt(char); // '0' = 0, ..., '9' = 9
+        }
+    }
+
+    return totalScore;
+  }
