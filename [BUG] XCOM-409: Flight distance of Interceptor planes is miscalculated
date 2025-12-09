@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/67b7a527c9f842fd3b02adb8/train/javascript
+
+function travelDistance(avgSpeed, travelTime) {
+  let speed_kph = avgSpeed * 1.852;
+  let  travel_time_hours = travelTime / 60;
+  let  distance_km = speed_kph * travel_time_hours;
+    return distance_km;
+  }
