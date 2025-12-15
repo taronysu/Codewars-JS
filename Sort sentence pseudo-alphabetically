@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/52dffa05467ee54b93000712/train/javascript
+
+function sort(sentence){
+sentence = sentence.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+    const words = sentence.split(' ');
+
+    // Separate words into lower and upper case
+    const lowerCaseWords = words.filter(word => word[0] === word[0].toLowerCase()).sort();
+    const upperCaseWords = words.filter(word => word[0] === word[0].toUpperCase()).sort().reverse();
+
+    // Combine the sorted lists
+    return lowerCaseWords.concat(upperCaseWords).join(' ');
+}
