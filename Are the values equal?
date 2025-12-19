@@ -1,0 +1,29 @@
+https://www.codewars.com/kata/5814d0efad98ccb8d100012f/train/javascript
+
+function areEqual(arg1, arg2) {
+const type1 = typeof arg1;
+    const type2 = typeof arg2;
+
+    if (type1 !== type2) return false;
+
+    if (type1 === 'object') {
+        if (Array.isArray(arg1) !== Array.isArray(arg2)) return false;
+
+        const keys1 = Object.keys(arg1);
+        const keys2 = Object.keys(arg2);
+
+        if (keys1.length !== keys2.length) return false;
+
+        for (let key of keys1) {
+            if (!keys2.includes(key)) return false;
+            if (!areEqual(arg1[key], arg2[key])) return false;
+        }
+        return true;
+    }
+
+    if (type1 === 'string') {
+        return arg1 === arg2;
+    }
+
+    return arg1 === arg2;
+}
