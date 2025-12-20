@@ -1,0 +1,34 @@
+https://www.codewars.com/kata/588c0a38b7cd14085300003f/train/javascript
+
+const divNum = (a, b) => { if (a > b) {
+        return "Error";
+    }
+
+    function count_divisors(n) {
+        let count = 0;
+        for (let i = 1; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                count++;
+                if (i !== n / i) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    let max_divisors = 0;
+    let result = a;
+
+    for (let num = a; num <= b; num++) {
+        let divisors = count_divisors(num);
+        if (divisors > max_divisors) {
+            max_divisors = divisors;
+            result = num;
+        } else if (divisors === max_divisors && num < result) {
+            result = num;
+        }
+    }
+
+    return result;
+}
