@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/57c15d314677bb2bd4000017/train/javascript
+
+function doors(n){
+  return Math.floor(n ** 0.5); 
+}
