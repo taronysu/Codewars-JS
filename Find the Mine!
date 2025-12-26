@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/528d9adf0e03778b9e00067e/train/javascript
+
+function mineLocation(grid){
+for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++) {
+            if (grid[i][j] === 1) {
+                return [i, j];
+            }
+        }
+    }
+}
