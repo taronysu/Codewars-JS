@@ -1,0 +1,3 @@
+https://www.codewars.com/kata/56453a12fcee9a6c4700009c/train/javascript
+
+let closeCompare = (a, b, m) => Math.abs(a - b) <= m? 0: Math.sign(a - b);
