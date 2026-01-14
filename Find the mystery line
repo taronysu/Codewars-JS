@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/67a11f616a791e028b86582f/train/javascript
+
+function findMysteryEquation(f) {
+ const x1 = 0;
+    const y1 = f(x1);
+    const x2 = 1;
+    const y2 = f(x2);
+    
+    const m = y2 - y1;
+    const b = y1;
+    
+    return [m, b];
+}
