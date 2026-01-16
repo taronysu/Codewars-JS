@@ -1,0 +1,9 @@
+https://www.codewars.com/kata/5a19701d80171fd71d000029/train/javascript
+
+function encode(str) {
+    return str.split('').map(char => String.fromCharCode(char.charCodeAt(0) * 6)).join('');
+}
+
+function decode(str) {
+    return str.split('').map(char => String.fromCharCode(char.charCodeAt(0) / 6)).join('');
+}
