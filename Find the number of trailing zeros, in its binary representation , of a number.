@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/66e793bba4b1a6f2e8f890e5/train/javascript
+
+function trailingZeros(n) {
+ const s = n.toString(2);
+ return s.length - 1 - s.lastIndexOf('1');
+}
