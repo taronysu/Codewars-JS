@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/57faa6ff9610ce181b000028/train/javascript
+
+function crap(x, bags, cap){
+  let c = 0;
+  for (let el of x){
+    for (let elem of el){
+      if (elem === "@") c++;
+      if (elem === "D") return "Dog!!";
+    }
+  }
+  return c <= bags * cap? "Clean" : "Cr@p"
+}
