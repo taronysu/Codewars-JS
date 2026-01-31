@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/52e88b39ffb6ac53a400022e/train/javascript
+
+function int32ToIp(n){
+    return `${(n >> 24) & 255}.${(n >> 16) & 255}.${(n >> 8) & 255}.${n & 255}`;
+}
