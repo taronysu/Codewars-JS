@@ -1,0 +1,29 @@
+https://www.codewars.com/kata/696eacb39271f8aa43b61841/train/javascript
+
+function toggleBit(n, p) {
+    return n ^ (1 << p);
+}
+
+function setBit(n, p) {
+    return n | (1 << p);
+}
+
+function clearBit(n, p) {
+    return n & ~(1 << p);
+}
+
+function isBitSet(n, p) {
+    return (n & (1 << p)) !== 0;
+}
+
+function setMultipleBits(n, mask) {
+    return n | mask;
+}
+
+function clearMultipleBits(n, mask) {
+    return n & ~mask;
+}
+
+function toggleMultipleBits(n, mask) {
+    return n ^ mask;
+}
