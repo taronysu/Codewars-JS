@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/557dd2a061f099504a000088/train/javascript
+
+function listToArray(list) {
+   const array = [];
+    let current = list;
+
+    while (current) {
+        array.push(current.value);
+        current = current.next;
+    }
+
+    return array;
+}
