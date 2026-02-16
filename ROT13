@@ -1,0 +1,15 @@
+https://www.codewars.com/kata/52223df9e8f98c7aa7000062/train/javascript
+
+function rot13(text) {
+  let result = [];
+    for (let char of text) {
+        if ('a' <= char && char <= 'z') {
+            result.push(String.fromCharCode((char.charCodeAt(0) - 'a'.charCodeAt(0) + 13) % 26 + 'a'.charCodeAt(0)));
+        } else if ('A' <= char && char <= 'Z') {
+            result.push(String.fromCharCode((char.charCodeAt(0) - 'A'.charCodeAt(0) + 13) % 26 + 'A'.charCodeAt(0)));
+        } else {
+            result.push(char);
+        }
+    }
+    return result.join('');
+}
