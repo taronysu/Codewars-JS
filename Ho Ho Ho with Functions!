@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/52af1f150fcae8d33d0009bc/train/javascript
+
+function ho(ho) {
+    return ho ? "Ho " + ho : "Ho!";
+}
