@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/56968ce7753513604b000055/train/javascript
+
+function pyramidHeight(n) {
+  let height = 0;
+    let cubes_used = 0;
+
+    while (true) {
+        height += 1;
+        let cubes_needed = height ** 2;
+        cubes_used += cubes_needed;
+
+        if (cubes_used > n) {
+            return height - 1;
+        }
+    }
+}
