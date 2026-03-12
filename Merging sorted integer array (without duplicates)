@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript
+
+function mergeArrays(a, b) {
+    return Array.from(new Set([...a, ...b])).sort((a, b) => a - b);
+}
