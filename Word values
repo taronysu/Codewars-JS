@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/598d91785d4ce3ec4f000018/train/javascript
+
+function wordValue(a) {
+  let alphabet = " abcdefghijklmnopqrstuvwxyz";
+  let values = [];
+  for (let i = 0; i < a.length; i++) {
+    values[i] = 0;
+    for (let j = 0; j < a[i].length; j++) {
+      values[i] += alphabet.indexOf(a[i][j]);
+    }
+    values[i] *= (i + 1);
+  }
+  return values;
+}
