@@ -1,0 +1,30 @@
+https://www.codewars.com/kata/5539fecef69c483c5a000015/train/javascript
+
+function isPrime(n) {
+    if (n <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function reverseNumber(n) {
+    return parseInt(n.toString().split('').reverse().join(''), 10);
+}
+
+function backwardsPrime(start, end) {
+    const backwardsPrimes = [];
+    for (let num = start; num <= end; num++) {
+        if (isPrime(num)) {
+            const reversedNum = reverseNumber(num);
+            if (reversedNum !== num && isPrime(reversedNum)) {
+                backwardsPrimes.push(num);
+            }
+        }
+    }
+    return backwardsPrimes.sort((a, b) => a - b);
+}
