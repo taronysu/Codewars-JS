@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/595910299197d929a10005ae/train/javascript
+
+function pizzaRewards(customers, minOrders, minPrice) {
+  return Object.keys(customers).filter(customer => {
+        return customers[customer].filter(order => order >= minPrice).length >= minOrders;
+    });
+}
