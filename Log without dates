@@ -1,0 +1,15 @@
+https://www.codewars.com/kata/64cac86333ab6a14f70c6fb6/train/javascript
+
+function checkLogs(events) {
+  if (!events.length) {
+        return 0;
+    }
+    
+    let days = 1;
+    for (let i = 1; i < events.length; i++) {
+        if (events[i] <= events[i - 1]) {
+            days += 1;
+        }
+    }
+    return days;
+}
