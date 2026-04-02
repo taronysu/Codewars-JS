@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/566fc12495810954b1000030/train/javascript
+
+function nbDig(n, d) {
+const sq = Array.from({ length: n + 1 }, (_, el) => (el * el).toString()).join('');
+    return sq.split('').filter(char => char === d.toString()).length;
+}
