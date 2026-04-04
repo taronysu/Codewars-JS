@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/69b9359e8af0beedadc87db9/train/javascript
+
+function identifyMonster(weaknesses, bestiary) {
+    for (const monster in bestiary) {
+        if (weaknesses.every(weakness => bestiary[monster].includes(weakness))) {
+            return monster;
+        }
+    }
+    return "Unknown monster";
+}
+
+const bestiary = {
+    "Griffin": ["Grapeshot", "Hybrid Oil", "Aard"],
+    "Noonwraith": ["Yrden", "Moon Dust", "Specter Oil"],
+    "Drowner": ["Igni", "Necrophage Oil"]
+}
