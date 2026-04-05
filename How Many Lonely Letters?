@@ -1,0 +1,23 @@
+https://www.codewars.com/kata/69cda5b85599f307742ce70a/train/javascript
+
+function countLonelyLetters(str) {
+const cleanedStr = str.toLowerCase().replace(/[^a-z]/g, '');
+    const letterCount = {};
+    const lonelyLetters = new Set();
+
+    for (const letter of cleanedStr) {
+        letterCount[letter] = (letterCount[letter] || 0) + 1;
+    }
+
+    for (const letter of Object.keys(letterCount)) {
+        if (letterCount[letter] === 1) {
+            const prevLetter = String.fromCharCode(letter.charCodeAt(0) - 1);
+            const nextLetter = String.fromCharCode(letter.charCodeAt(0) + 1);
+            if (!letterCount[prevLetter] && !letterCount[nextLetter]) {
+                lonelyLetters.add(letter);
+            }
+        }
+    }
+
+    return lonelyLetters.size;
+}
