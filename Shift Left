@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/5bdc191306a8a678f6000187/train/javascript
+
+function shiftLeft(str1,str2){
+  let len1 = str1.length;
+    let len2 = str2.length;
+    let commonLength = 0;
+
+    while (commonLength < len1 && commonLength < len2 && str1[len1 - 1 - commonLength] === str2[len2 - 1 - commonLength]) {
+        commonLength++;
+    }
+
+    return (len1 - commonLength) + (len2 - commonLength);
+}
