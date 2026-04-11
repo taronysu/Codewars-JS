@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/5a0c5b3206d5b696940000b8/train/javascript
+
+function ballCollector(d) {
+  const sack = { weight: 0 };
+    d.forEach(item => {
+        if (item === 58) {
+            sack.weight += item;
+        }
+    });
+    return sack;
+}
