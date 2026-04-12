@@ -1,0 +1,25 @@
+https://www.codewars.com/kata/55f3facb78a9fd5b26000036/train/javascript
+
+function checkRoot(input){
+const numbers = input.split(',').map(Number);
+    
+    if (numbers.length !== 4 || numbers.some(isNaN)) {
+        return "incorrect input";
+    }
+    
+    const [a, b, c, d] = numbers;
+    
+    if (b !== a + 1 || c !== b + 1 || d !== c + 1) {
+        return "not consecutive";
+    }
+    
+    const product = a * b * c * d;
+    const result = product + 1;
+    const sqrt = Math.sqrt(result);
+    
+    if (Number.isInteger(sqrt)) {
+        return  `${result}, ${sqrt}`
+    }
+    
+    return "not a perfect square";
+}
