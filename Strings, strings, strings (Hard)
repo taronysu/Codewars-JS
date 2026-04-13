@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/56d9439813f38853b40000e4/train/javascript
+
+Array.prototype.toString = function() {
+    const stringify = (arr) => {
+        return '[' + arr.map(item => {
+            if (Array.isArray(item)) {
+                return stringify(item);
+            } else if (typeof item === 'string') {
+                return `'${item}'`;
+            } else {
+                return item;
+            }
+        }).join(',') + ']';
+    };
+    return stringify(this);
+  }
