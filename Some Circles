@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/56143efa9d32b3aa65000016/train/javascript
+
+function sumCircles(...diameters) {
+    const totalArea = diameters.reduce((acc, d) => acc + Math.PI * Math.pow(d / 2, 2), 0);
+    return `We have this much circle: ${Math.round(totalArea)}`;
+}
