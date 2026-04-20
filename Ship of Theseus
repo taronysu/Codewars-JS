@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/69b83710b26939b35fd10429/train/javascript
+
+function shipOfTheseus(ship) {
+    if (ship.length <= 1) return true;
+
+    for (let i = 0; i < ship.length - 1; i++) {
+        let changes = 0;
+        for (let j = 0; j < ship[i].length; j++) {
+            if (ship[i][j] !== ship[i + 1][j]) {
+                changes++;
+            }
+        }
+        if (changes !== 1) {
+            return false;
+        }
+    }
+    return true;
+}
