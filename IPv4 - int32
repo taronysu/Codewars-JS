@@ -1,0 +1,9 @@
+https://www.codewars.com/kata/52ea928a1ef5cfec800003ee/train/javascript
+
+function ipToInt32(ip) {
+let r = "";
+    ip.split('.').forEach(function(i) {
+        r += ("00000000" + (parseInt(i, 10)).toString(2)).slice(-8);
+    });
+    return parseInt(r, 2)
+}
