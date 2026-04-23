@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/69b58aaee8f1deef7ece7d0e/train/javascript
+
+function breachAttempts(hackers, securityLevel, increase) {
+   if (hackers.length === 0) return 0;
+
+    let successfulBreaches = 0;
+    let currentSecurityLevel = securityLevel;
+
+    for (let skill of hackers) {
+        if (skill > currentSecurityLevel) {
+            successfulBreaches++;
+        } else {
+            currentSecurityLevel += increase;
+        }
+    }
+
+    return successfulBreaches;
+}
