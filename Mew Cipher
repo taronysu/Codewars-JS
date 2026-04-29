@@ -1,0 +1,19 @@
+https://www.codewars.com/kata/671bd5419ea261fbb8d0a0ca/train/javascript
+
+function decipher(c) {
+  let a = '';
+    for (let i = 0; i < c[0].length; i++) {
+        let b = 0;
+        for (let j = 0; j < c.length; j++) {
+            if (c[j][i] !== " ") {
+                b += c[j][i].charCodeAt(0) - 96;
+            }
+        }
+        if (Math.floor(b / c.length) !== 0) {
+            a += String.fromCharCode(Math.floor(b / c.length) + 96);
+        } else {
+            a += " ";
+        }
+    }
+    return a;
+}
