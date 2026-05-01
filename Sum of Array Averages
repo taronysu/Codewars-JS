@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/56d5166ec87df55dbe000063/train/javascript
+
+function sumAverage(arr) {
+    return (arr.reduce((acc, el) => acc + (el.reduce((a, b) => a + b, 0) / el.length), 0));
+}
