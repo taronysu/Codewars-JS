@@ -1,0 +1,15 @@
+https://www.codewars.com/kata/5840f47570407f372a00008b/train/javascript
+
+function mostAppear(arr){
+ let count = 0;
+    let candidate;
+
+    for (let num of arr) {
+        if (count === 0) {
+            candidate = num;
+        }
+        count += (num === candidate) ? 1 : -1;
+    }
+
+    return candidate;   
+}
