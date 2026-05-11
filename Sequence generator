@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/56ba8a9b022c16017d0001f3/train/javascript
+
+function sequence(n, pattern) {
+    return [...Array(n)].map(typeof pattern == 'function' ? pattern : () => pattern);
+}
