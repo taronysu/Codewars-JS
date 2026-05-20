@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/588810c99fb63e49e1000606/train/javascript
+
+function houseOfCats(legs) {
+ const result = [];
+    for (let i = 0; i <= legs / 2; i++) {
+        if ((legs - 2 * i) % 4 === 0) {
+            result.push(i);
+        }
+    }
+    return result;  
+  }
