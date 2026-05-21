@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/5672f4e3404d0609ec00000a/train/javascript
+
+const frame = (text, char) => {
+   const maxlen = Math.max(...text.map(e=>e.length))
+   const n = char.repeat((4+maxlen))
+    let res = [n]
+  
+  for (var j of text) {
+    const filler = n.length-3-j.length
+    res.push(`${char} ${j}${(' ').repeat(filler)}${char}`)
+  }
+  
+  res.push(n)
+  
+  return res.join`\n`
+}
