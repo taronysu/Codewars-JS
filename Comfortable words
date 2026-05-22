@@ -1,0 +1,28 @@
+https://www.codewars.com/kata/56684677dc75e3de2500002b/train/javascript
+
+const comfortableWord = word => {
+    const leftHand = new Set("qwertasdfgzxcvb");
+    const rightHand = new Set("yuiophjklnm");
+    
+    let lastHand = null;
+    
+    for (let letter of word) {
+        let currentHand;
+        if (leftHand.has(letter)) {
+            currentHand = 'left';
+        } else if (rightHand.has(letter)) {
+            currentHand = 'right';
+        } else {
+            return false;
+        }
+        
+        if (lastHand === null) {
+            lastHand = currentHand;
+        } else if (lastHand === currentHand) {
+            return false;
+        }
+        lastHand = currentHand;
+    }
+    
+    return true;
+};
