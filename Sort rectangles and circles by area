@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/5a1de8a580171fb29f00005e/train/javascript
+
+function sortByArea(shapes) {
+ const areas = shapes.map(shape => {
+        if (Array.isArray(shape)) {
+            return shape[0] * shape[1]; // Rectangle area
+        } else {
+            return Math.PI * shape * shape; // Circle area
+        }
+    });
+    return areas.sort((a, b) => a - b);
+}
