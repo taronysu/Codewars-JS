@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/57a2ab1abb994466910003af/train/javascript
+
+function splitOddAndEven(n) {
+const str = n.toString();
+    const result = [];
+    let currentPart = str[0];
+
+    for (let i = 1; i < str.length; i++) {
+        if ((str[i] % 2) === (str[i - 1] % 2)) {
+            currentPart += str[i];
+        } else {
+            result.push(parseInt(currentPart, 10));
+            currentPart = str[i];
+        }
+    }
+    result.push(parseInt(currentPart, 10));
+    return result;
+}
