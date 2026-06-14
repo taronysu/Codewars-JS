@@ -1,0 +1,27 @@
+https://www.codewars.com/kata/53138a5dbb244a40680000a3/train/javascript
+
+class SortedList {
+    constructor() {
+        this.list = [];
+    }
+
+    add(x) {
+        let index = this.list.findIndex(num => num > x);
+        if (index === -1) {
+            this.list.push(x);
+        } else {
+            this.list.splice(index, 0, x);
+        }
+    }
+
+    get(i) {
+        if (i < 0 || i >= this.list.length) {
+            throw new Error('Index out of bounds');
+        }
+        return this.list[i];
+    }
+
+    get length() {
+        return this.list.length;
+    }
+}
