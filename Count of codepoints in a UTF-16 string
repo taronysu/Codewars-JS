@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/599c4b69eb8e49effa000079/train/javascript
+
+function getRealLength(str) {
+   let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        const codeUnit = str.charCodeAt(i);
+        // Check for surrogate pairs
+        if (codeUnit >= 0xD800 && codeUnit <= 0xDBFF) {
+            i++; // Skip the next code unit
+        }
+        count++;
+    }
+    return count;
+}
