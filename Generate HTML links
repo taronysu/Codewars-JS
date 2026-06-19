@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/56896f078dcf3e886c000067/train/javascript
+
+function generateMenu(menuItems) {
+    return menuItems.map(item => `<a href="${item.url}">${item.text}</a>`).join('');
+  }
