@@ -1,0 +1,35 @@
+https://www.codewars.com/kata/54eecc187f9142cc4600119e/train/javascript
+
+class HTMLGen {
+    a(innerHTML) {
+        return `<a>${innerHTML}</a>`;
+    }
+
+    b(innerHTML) {
+        return `<b>${innerHTML}</b>`;
+    }
+
+    p(innerHTML) {
+        return `<p>${innerHTML}</p>`;
+    }
+
+    body(innerHTML) {
+        return `<body>${innerHTML}</body>`;
+    }
+
+    div(innerHTML) {
+        return `<div>${innerHTML}</div>`;
+    }
+
+    span(innerHTML) {
+        return `<span>${innerHTML}</span>`;
+    }
+
+    title(innerHTML) {
+        return `<title>${innerHTML}</title>`;
+    }
+
+    comment(innerHTML) {
+        return `<!--${innerHTML}-->`;
+    }
+}
