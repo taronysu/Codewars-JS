@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/5701800886306a876a001031/train/javascript
+
+function lineupStudents(st){
+const s = st.split(' ');
+    return s.sort((a, b) => {
+        if (a.length !== b.length) {
+            return b.length - a.length;
+        }
+        return b.localeCompare(a);
+    });
+}
