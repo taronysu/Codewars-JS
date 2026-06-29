@@ -1,0 +1,12 @@
+https://www.codewars.com/kata/59cfe5b023daccfd07000048/train/javascript
+
+function numberOfFolds(n) {
+if (n < 1) {
+        return 0;
+    }
+    let folds = 0;
+    while ((2 ** folds) < n) {
+        folds += 1;
+    }
+    return folds;
+}
