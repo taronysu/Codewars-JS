@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/530d0298e09e54a3620006c2/train/javascript
+
+Number.prototype.palindromeBelow = function(base) {
+    const isPalindrome = (num) => {
+        const str = num.toString(base);
+        return str === str.split('').reverse().join('');
+    };
+
+    const result = [];
+    for (let i = 1; i < this; i++) {
+        if (isPalindrome(i)) {
+            result.push(i);
+        }
+    }
+    return result;
+}
