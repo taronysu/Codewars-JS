@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/5632e12703e2037fa7000061/train/javascript
+
+function base64toBase10(base64) {
+const base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    let base10Value = 0;
+
+    for (let i = 0; i < base64.length; i++) {
+        const char = base64.charAt(i);
+        const value = base64Chars.indexOf(char);
+        base10Value = base10Value * 64 + value;
+    }
+
+    return base10Value;
+}
