@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/54d22119beeaaaf663000024/train/javascript
+
+function shadesOfGrey(n){
+if (n < 0) {
+        return [];
+    }
+    if (n > 254) {
+        n = 254;
+    }
+    return Array.from({ length: n }, (_, i) => `#${(i + 1).toString(16).padStart(2, '0')}${(i + 1).toString(16).padStart(2, '0')}${(i + 1).toString(16).padStart(2, '0')}`);
+}
