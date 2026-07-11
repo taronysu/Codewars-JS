@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5681cf0be812b41721000034/train/javascript
+
+function removeNoise(st){
+    return st.split('').filter(a => !'%$&/#·@|º\\ª'.includes(a)).join('');
+}
