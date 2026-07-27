@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/56971747aa359bdbf800004d/train/javascript
+
+function trickyDoubles(n){
+    const sn = n.toString();
+    const ln2 = Math.floor(sn.length / 2);
+    
+    return sn.slice(0, ln2) === sn.slice(ln2) ? n : n * 2;
+}
