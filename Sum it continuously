@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/59b44d00bf10a439dd00006f/train/javascript
+
+function add(l) {
+    return l.map((_, i) => l.slice(0, i + 1).reduce((a, b) => a + b, 0));
+}
