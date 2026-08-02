@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/57470efebf81fea166001627/train/javascript
+
+function letterCheck(arr) {
+ let  [string1, string2] = arr.map(word => word.toLowerCase());
+  let [first, second] = [[...string1], [...string2]];
+  return second.every(char => first.includes(char));
+}    
