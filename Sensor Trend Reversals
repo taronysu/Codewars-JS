@@ -1,0 +1,29 @@
+https://www.codewars.com/kata/6a6bdaca77f722e42da8fba6/train/javascript
+
+function countDirectionChanges(readings) {
+if (readings.length < 3) return 0;
+
+    let filteredReadings = readings.filter((value, index, self) => value !== self[index - 1]);
+    let changes = 0;
+    let direction = null;
+
+    for (let i = 1; i < filteredReadings.length; i++) {
+        if (filteredReadings[i] > filteredReadings[i - 1]) {
+            if (direction === 'decreasing') {
+                changes++;
+                direction = 'increasing';
+            } else if (direction === null) {
+                direction = 'increasing';
+            }
+        } else if (filteredReadings[i] < filteredReadings[i - 1]) {
+            if (direction === 'increasing') {
+                changes++;
+                direction = 'decreasing';
+            } else if (direction === null) {
+                direction = 'decreasing';
+            }
+        }
+    }
+
+    return changes;
+}
