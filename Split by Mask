@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/6a68ed7894f29599a1f7a248/train/javascript
+
+function split(str,mask) {
+const totalLength = mask.reduce((acc, len) => acc + len, 0);
+    if (totalLength !== str.length) return null;
+
+    let result = [];
+    let startIndex = 0;
+
+    for (let len of mask) {
+        result.push(str.slice(startIndex, startIndex + len));
+        startIndex += len;
+    }
+
+    return result;
+}
