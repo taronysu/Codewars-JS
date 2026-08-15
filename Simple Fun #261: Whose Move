@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/59126992f9f87fd31600009b/train/javascript
+
+function whoseMove(lp, win) {
+if (lp === 'black' && win === false) {
+        return 'white';
+    } else if (lp === 'white' && win === false) {
+        return 'black';
+    } else if (lp === 'black' && win === true) {
+        return 'black';
+    } else if (lp === 'white' && win === true) {
+        return 'white';
+    }   
+}
