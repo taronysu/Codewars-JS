@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/69c2f04a1294ffc95c526d9e/train/javascript
+
+function findQuarterNotes(timeSignature) {
+const [top, bottom] = timeSignature.split('/').map(Number);
+    
+    if (bottom <= 0 || (bottom & (bottom - 1)) !== 0 || top < 1 || top >= 4096 || bottom >= 256) {
+        return null;
+    }
+    
+    const quarterNotes = (top * 4) / bottom;
+    
+    return Math.floor(Math.max(quarterNotes, 0));
+}
