@@ -1,0 +1,9 @@
+https://www.codewars.com/kata/604287495a72ae00131685c7/train/javascript
+
+function doubleton(num){
+  num = num + 1;
+    while (new Set(String(num)).size !== 2) {
+        num += 1;
+    }
+    return num;
+} 
