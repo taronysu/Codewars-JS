@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/5892595f190ca40ad0000095/train/javascript
+
+var mispelled = function(word1, word2){
+  let count = 1;
+  for(let  i = 0; i < word1.length; i++) { 
+    if(word1[i]!==word2[i])
+      count--;
+}
+  return count >= 0 ? true: false;
+  }
