@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/5a87449ab1710171300000fd/train/javascript
+
+function tidyNumber(n){
+n = n+'';
+let s=n.split('');
+let sorted = s.sort().join('');
+   return n === sorted;
+}
