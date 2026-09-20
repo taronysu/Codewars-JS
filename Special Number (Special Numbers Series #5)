@@ -1,0 +1,8 @@
+https://www.codewars.com/kata/5a55f04be6be383a50000187/train/javascript
+
+function specialNumber(n){
+for (let x of String(n).split('').map(Number)) {
+        if (x > 5) return "NOT!!";
+    }
+    return "Special!!";
+}
