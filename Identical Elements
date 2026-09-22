@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/583ebb9328a0c034490001ba/train/javascript
+
+function duplicateElements(m, n) {
+   let result = false;
+    for (let x of m) {
+        for (let y of n) {
+            if (x === y) {
+                result = true;
+                return result;
+            }
+        }
