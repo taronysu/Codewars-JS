@@ -1,0 +1,23 @@
+https://www.codewars.com/kata/5a434a9dc5e284724f000011/train/javascript
+
+function replaceCommon(string, letter) { 
+    let s = string.replace(/ /g, '');
+  let most_common_letter;
+    let obj = {};
+  for (let el of s){
+    if (obj[el]) obj[el]++;
+    else obj[el] = 1;
+    }
+ let tmp = Object.entries(obj);
+  let max = Math.max(...Object.values(obj));
+  for (let el of tmp){
+    if (el[1] === max) {
+      most_common_letter = el[0]; break;
+      }
+    }
+   let answer = "";
+  for (let i = 0; i < string.length; i++) {
+    answer += (string[i] !== most_common_letter) ? string[i] : letter;
+  }
+  return answer;
+}
