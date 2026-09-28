@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/649c4012aaad69003f1299c1/train/javascript
+
+function rgbToGrayscale(hex_color){ 
+hex_color = hex_color.replace('#', '');
+    
+    // Convert hex to RGB
+    const R = parseInt(hex_color.substring(0, 2), 16);
+    const G = parseInt(hex_color.substring(2, 4), 16);
+    const B = parseInt(hex_color.substring(4, 6), 16);
+    
+    // Calculate luminance Y
+    const Y = Math.round(0.299 * R + 0.587 * G + 0.114 * B);
+    
+    // Convert Y back to hex and format it
+    const grayscale_hex = `#${Y.toString(16).padStart(2, '0').toUpperCase()}${Y.toString(16).padStart(2, '0').toUpperCase()}${Y.toString(16).padStart(2, '0').toUpperCase()}`;
+    
+    return grayscale_hex;
+}
