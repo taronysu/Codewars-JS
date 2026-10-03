@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/52b4d1be990d6a2dac0002ab/train/javascript
+
+var maxZeroSequence = function(arr) {
+    const prev = { 0: -1 };
+    let cur = 0;
+    let mx = [];
+
+    for (let k = 0; k < arr.length; k++) {
+        cur += arr[k];
+        if (cur in prev && k - prev[cur] > mx.length) {
+            mx = arr.slice(prev[cur] + 1, k + 1);
+        } else {
+            prev[cur] = prev[cur] !== undefined ? prev[cur] : k;
+        }
+    }
+    
+    return mx;
+  }
