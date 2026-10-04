@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/58925dcb71f43f30cd00005f/train/javascript
+
+function latestClock(...a) {
+  for (let h = 23; h >= 0; h--) {
+        for (let m = 59; m >= 0; m--) {
+            const x = String(h).padStart(2, '0');
+            const y = String(m).padStart(2, '0');
+            const s = Array.from(x + y).map(Number);
+            if (s.sort().toString() === a.sort().toString()) {
+                return `${x}:${y}`;
+            }
+        }
+    }
+  }
