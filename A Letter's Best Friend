@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/64fc03a318692c1333ebc04c/train/javascript
+
+function bestFriend(t, a, b) {
+    return (t.split(a).length - 1) === (t.split(a + b).length - 1);
+}
