@@ -1,0 +1,19 @@
+https://www.codewars.com/kata/5a66ea69e6be38219f000110/train/javascript
+
+function solve(s) {
+ let left = 0, right = s.length - 1;
+    let mismatchCount = 0;
+    
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            mismatchCount++;
+            if (mismatchCount > 1) {
+                return false;
+            }
+        }
+        left++;
+        right--;
+    }
+    
+    return mismatchCount === 1 || (mismatchCount === 0 && s.length % 2 === 1);
+  }
