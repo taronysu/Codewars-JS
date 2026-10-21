@@ -1,0 +1,24 @@
+https://www.codewars.com/kata/55bc0c54147a98798f00003e/train/javascript
+
+function substring(s) {
+    let left = 0, right = 0;
+    const charMap = {};
+    let maxLength = 0;
+    let startIndex = 0;
+
+    while (right < s.length) {
+        charMap[s[right]] = right;
+        right++;
+
+        while (Object.keys(charMap).length > 2) {
+            if (charMap[s[left]] === left) {
+                delete charMap[s[left]];
+            }
+            left++;
+        }
+
+        if (right - left > maxLength) {
+            maxLength = right - left;
+            startIndex = left;
+        }
+    }
