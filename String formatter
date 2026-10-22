@@ -1,0 +1,21 @@
+https://www.codewars.com/kata/5706db5e4f2c295c0f000949/train/javascript
+
+function StringFormatter(rules){
+    return function(inputString) {
+        let formattedString = inputString;
+
+        if (rules.remove) {
+            formattedString = formattedString.split('').filter(char => !rules.remove.includes(char)).join('');
+        }
+
+        if (rules.map) {
+            formattedString = formattedString.split('').map(rules.map).join('');
+        }
+
+        if (rules.filter) {
+            formattedString = formattedString.split('').filter(rules.filter).join('');
+        }
+
+        return formattedString;
+    };
+}
