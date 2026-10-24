@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/6ad649de715eb5f5359a7e62/train/javascript
+
+function batteryBars(p) {
+    const bars = Math.floor(p / 20);
+    return "[" + "#".repeat(bars) + ".".repeat(5 - bars) + "]";
+}
