@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/660e5631b673a8004b71d208/train/javascript
+
+function continuedFraction(numerator,denominator) {
+ if (numerator === 0) {
+        return [];
+    }
+    
+    const result = [];
+    while (denominator) {
+        const quotient = Math.floor(numerator / denominator);
+        result.push(quotient);
+        [numerator, denominator] = [denominator, numerator - quotient * denominator];
+    }
+    
+    return result;
+}
