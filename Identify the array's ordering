@@ -1,0 +1,25 @@
+https://www.codewars.com/kata/57f669477c9a2b1b9700022d/train/javascript
+
+function orderType(arr) {
+ const lengths = arr.map(element => {
+        if (Array.isArray(element)) {
+            return element.length;
+        }
+        return String(element).length;
+    });
+
+    const isIncreasing = lengths.every((len, i) => i === 0 || len >= lengths[i - 1]);
+    const isDecreasing = lengths.every((len, i) => i === 0 || len <= lengths[i - 1]);
+    const isConstant = lengths.every(len => len === lengths[0]);
+
+    if (isConstant) {
+        return "Constant";
+    }
+    if (isIncreasing) {
+        return "Increasing";
+    }
+    if (isDecreasing) {
+        return "Decreasing";
+    }
+    return "Unsorted";
+}
