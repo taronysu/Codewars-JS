@@ -1,0 +1,23 @@
+https://www.codewars.com/kata/699af631058f5c12b04f4efe/train/javascript
+
+function stalinSort(arr) {
+if (!arr.length) {
+        return;
+    }
+
+    const survivors = [arr[0]];
+
+    for (let i = 1; i < arr.length; i++) {
+        const num = arr[i];
+        if (num >= survivors[survivors.length - 1]) {
+            survivors.push(num);
+        } else {
+            console.log("Execute!");
+        }
+    }
+
+    for (let i = 0; i < survivors.length; i++) {
+        arr[i] = survivors[i];
+    }
+    arr.length = survivors.length;
+}
